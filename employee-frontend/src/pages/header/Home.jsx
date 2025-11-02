@@ -10,8 +10,8 @@ const Home = () => {
       <div className="container-fluid">
         <Navbar.Brand to={"/"}><strong>DTech Private Ltd.</strong></Navbar.Brand>
         <Nav className="ml-auto">
-          <Nav.Link as={Link} to={"/"} className="nav-link">Employee</Nav.Link>
-          <Nav.Link as={Link} to={"/employee"} className="nav-link ">Post Employee</Nav.Link>
+          <Nav.Link as={Link} to={"/employee"} className="nav-link">Dashboard</Nav.Link>
+          <Nav.Link as={Link} to={"/"} className="nav-link ">Add Employee</Nav.Link>
         </Nav>
       </div>
     </Navbar>

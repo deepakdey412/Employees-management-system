@@ -11,8 +11,8 @@ const App = () => {
     <div className="container mt-5">
       <Home/>
       <Routes>
-        <Route path='/' element={<Dashboard />}></Route>
-        <Route path='/employee' element={<Post />}></Route>
+        <Route path='/employee' element={<Dashboard />}></Route>
+        <Route path='/' element={<Post />}></Route>
         <Route path='/employee/:id' element={<Update />}></Route>
         <Route path='/*' element={<NoMatch />}></Route>
       </Routes>
