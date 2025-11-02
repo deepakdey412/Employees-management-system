@@ -28,6 +28,11 @@ public class EmployeeController {
         return employeeService.getAllEmployee();
     }
 
+    @GetMapping("/get/{id}")
+    public Employee getbyid( @PathVariable  Long id) {
+        return employeeService.getsingleEmployee(id);
+    }
+
     @PutMapping("/update/{id}")
     public Employee updateEmployee(@PathVariable Long id, @RequestBody Employee employee) {
         return employeeService.updateEmployee(id, employee);

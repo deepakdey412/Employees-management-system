@@ -50,6 +50,7 @@ const Dashboard = () => {
     navigate(`/employee/${id}`);
   };
 
+  
   return (
     <Container className="mt-5">
       <h2 className="text-center mb-4">Employee Dashboard</h2>

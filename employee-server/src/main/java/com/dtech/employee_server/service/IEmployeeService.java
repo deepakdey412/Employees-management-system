@@ -22,6 +22,13 @@ public class IEmployeeService implements EmployeeService {
     }
 
     @Override
+    public Employee getsingleEmployee(Long id) {
+        return employeeRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+    }
+
+
+    @Override
     public List<Employee> getAllEmployee() {
         return employeeRepository.findAll();
     }
@@ -33,6 +40,8 @@ public class IEmployeeService implements EmployeeService {
             Employee emp = existingEmployee.get();
             emp.setName(employee.getName());
             emp.setEmail(employee.getEmail());
+            emp.setPassword(employee.getPassword());
+
             return employeeRepository.save(emp);
         } else {
             throw new RuntimeException("Employee not found with id " + id);
