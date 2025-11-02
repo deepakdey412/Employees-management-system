@@ -16,7 +16,7 @@ public class EmployeeController {
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
-    
+
     @PostMapping("/create")
     public Employee createEmployee(@RequestBody Employee employee) {
         return employeeService.createEmployee(employee);

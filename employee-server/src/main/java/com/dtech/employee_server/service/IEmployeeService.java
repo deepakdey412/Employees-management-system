@@ -33,7 +33,6 @@ public class IEmployeeService implements EmployeeService {
             Employee emp = existingEmployee.get();
             emp.setName(employee.getName());
             emp.setEmail(employee.getEmail());
-            emp.setDepartment(employee.getDepartment());
             return employeeRepository.save(emp);
         } else {
             throw new RuntimeException("Employee not found with id " + id);
