@@ -1,10 +1,19 @@
 
+import Dashboard from './pages/dashboard/Dashboard';
+import NoMatch from './pages/Error/NoMatch';
 import Home from './pages/header/Home';
+import { Route, Routes }  from 'react-router-dom';
+import Post from './post/Post';
 
 const App = () => {
  return (
     <div className="container mt-5">
       <Home/>
+      <Routes>
+        <Route path='/' element={<Dashboard />}></Route>
+        <Route path='/employee' element={<Post />}></Route>
+        <Route path='/*' element={<NoMatch />}></Route>
+      </Routes>
     </div>
   )
 }
