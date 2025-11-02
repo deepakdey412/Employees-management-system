@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/employee", produces = MediaType.APPLICATION_JSON_VALUE)
+@CrossOrigin("*")
 public class EmployeeController {
 
     private final EmployeeService employeeService;
