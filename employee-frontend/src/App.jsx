@@ -4,6 +4,7 @@ import NoMatch from './pages/Error/NoMatch';
 import Home from './pages/header/Home';
 import { Route, Routes }  from 'react-router-dom';
 import Post from './post/Post';
+import Update from './pages/update/Update';
 
 const App = () => {
  return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Dashboard />}></Route>
         <Route path='/employee' element={<Post />}></Route>
+        <Route path='/employee/:id' element={<Update />}></Route>
         <Route path='/*' element={<NoMatch />}></Route>
       </Routes>
     </div>

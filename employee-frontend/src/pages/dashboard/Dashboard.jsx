@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Table, Button, Container, Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate(); // ✅ FIXED — must call it as a function
 
-  // Fetch all employees
+  // ✅ Fetch all employees
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
@@ -24,7 +26,7 @@ const Dashboard = () => {
     fetchEmployees();
   }, []);
 
-  // Delete employee
+  // ✅ Delete employee
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this employee?")) return;
 
@@ -43,10 +45,9 @@ const Dashboard = () => {
     }
   };
 
-  // Update (navigate or open form later)
+  // ✅ Navigate to update page
   const handleUpdate = (id) => {
-    alert(`Update employee with ID: ${id}`);
-    // You can later navigate to update form: navigate(`/update/${id}`)
+    navigate(`/employee/${id}`);
   };
 
   return (
@@ -61,7 +62,7 @@ const Dashboard = () => {
         <h5 className="text-center text-muted">No employees found.</h5>
       ) : (
         <Table striped bordered hover responsive>
-          <thead>
+          <thead className="table-dark">
             <tr>
               <th>ID</th>
               <th>Name</th>
