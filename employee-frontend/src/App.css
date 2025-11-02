@@ -1,33 +1,11 @@
-/* Reset defaults */
-* {
+html, body, #root {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f8f9fa;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Content padding to avoid hiding behind navbar */
-.home .content {
-  padding-top: 80px;
-  text-align: center;
-}
-
-/* Make sure navbar spans entire width */
-.navbar {
   width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
-/* Optional: Give space below navbar for clarity */
-.content {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+nav.navbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
